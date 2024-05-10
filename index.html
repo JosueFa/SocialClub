@@ -1,83 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhatsApp APP</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .chat-container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .message {
-            background-color: #f2f2f2;
-            padding: 10px 20px;
-            margin: 10px 0;
-            border-radius: 20px;
-            clear: both;
-            max-width: 70%;
-        }
-        .message.sender {
-            background-color: #DCF8C6;
-            float: right;
-        }
-        .message.receiver {
-            background-color: #E5E5EA;
-            float: left;
-        }
-        .input-container {
-            margin-top: 20px;
-        }
-        .input-container input[type="text"] {
-            width: calc(100% - 80px);
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            font-size: 16px;
-        }
-        .input-container button {
-            width: 60px;
-            padding: 10px;
-            border: none;
-            background-color: #25D366;
-            color: white;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
+    <title>Colegio XYZ</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="chat-container" id="chatContainer">
-        <div class="message receiver">Hola, ¿cómo estás?</div>
-        <div class="message sender">Toy tite, :c</div>
-    </div>
-    <div class="input-container">
-        <input type="text" id="messageInput" placeholder="Escribe un mensaje...">
-        <button onclick="sendMessage()">Enviar</button>
-    </div>
+    <header>
+        <h1>Colegio XYZ</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Sobre Nosotros</a></li>
+                <li><a href="#">Misión</a></li>
+                <li><a href="#">Visión</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <script>
-        function sendMessage() {
-            var messageInput = document.getElementById("messageInput");
-            var message = messageInput.value.trim();
+    <section id="sobre-nosotros">
+        <h2>Sobre Nosotros</h2>
+        <p>Bienvenidos al Colegio XYZ, donde nos dedicamos a proporcionar una educación de calidad a nuestros estudiantes...</p>
+    </section>
 
-            if (message !== "") {
-                var chatContainer = document.getElementById("chatContainer");
-                var newMessage = document.createElement("div");
-                newMessage.className = "message sender";
-                newMessage.textContent = message;
-                chatContainer.appendChild(newMessage);
+    <section id="mision">
+        <h2>Misión</h2>
+        <p>Nuestra misión es formar individuos íntegros, capaces de enfrentar los retos del mundo actual...</p>
+    </section>
 
-                messageInput.value = "";
-            }
-        }
-    </script>
+    <section id="vision">
+        <h2>Visión</h2>
+        <p>Buscamos ser reconocidos como líderes en la educación, inspirando a nuestros estudiantes a alcanzar su máximo potencial...</p>
+    </section>
+
+    <footer>
+        <p>Derechos de autor &copy; 2024 Colegio XYZ</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
